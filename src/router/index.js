@@ -27,11 +27,6 @@ export default new Router({
           component: Information
         },
         {
-          path: 'information',
-          name: 'information',
-          component: Information
-        },
-        {
           path: 'orderInfo',
           name: 'orderInfo',
           component: OrderInfo
