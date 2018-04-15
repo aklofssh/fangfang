@@ -45,6 +45,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     }
   },
   plugins: [
+    new webpack.optimize.CommonsChunkPlugin('common.js'),
+      new webpack.ProvidePlugin({
+      jQuery: "jquery",
+      $: "jquery"
+    }),
+
     new webpack.DefinePlugin({
       'process.env': require('../config/dev.env')
     }),

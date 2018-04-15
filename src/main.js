@@ -10,12 +10,20 @@ import './assets/css/base.css';
 import './assets/css/shop_common.css';
 import './assets/css/shop_header.css';
 import './assets/css/shop_home.css';
+import './assets/css/global.css';
+import './assets/css/login-register.css';
+import $ from 'jquery';
+
+import axios from 'axios'
 
 Vue.use(ElementUI);
 Vue.config.productionTip = false
 
+Vue.prototype.$http = axios;
+Vue.prototype.window = window;
+
 /* eslint-disable no-new */
-new Vue({
+window.$app=new Vue({
   el: '#app',
   router,
   store,
